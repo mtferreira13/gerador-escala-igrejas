@@ -36,8 +36,8 @@ class GeradorEscala:
         self.contadores = {nome: 0 for nome in self.homens_sede + self.mulheres_sede + self.homens_nao_sede + self.mulheres_nao_sede}
         
         # Funções
-        self.funcoes_homens_single = ["Lateral do Púlpito", "Porta Direita"]
-        self.funcao_mulher = "Porta Esquerda"
+        self.funcoes_homens_single = ["Lateral do Púlpito", "Porta Esquerda"]
+        self.funcao_mulher = "Porta Direita"
         self.funcao_homens_dupla = "Porta Central"
 
     def _obter_dias_de_culto(self):
@@ -137,9 +137,10 @@ class GeradorEscala:
                 "Mês da escala": evento,
                 "Data": data.strftime("%d/%m"),
                 "Porta Central": f"{escala_do_dia[self.funcao_homens_dupla][0]} e {escala_do_dia[self.funcao_homens_dupla][1]}",
-                "Porta Esquerda": escala_do_dia[self.funcao_mulher][0],
+                "Porta Esquerda": escala_do_dia[self.funcoes_homens_single[1]][0]
                 "Lateral do Púlpito": escala_do_dia[self.funcoes_homens_single[0]][0],
-                "Porta Direita": escala_do_dia[self.funcoes_homens_single[1]][0]
+                "Porta Direita": escala_do_dia[self.funcao_mulher][0]
+                
             })
 
         return pd.DataFrame(dados_escala)
