@@ -137,7 +137,7 @@ class GeradorEscala:
                 "Mês da escala": evento,
                 "Data": data.strftime("%d/%m"),
                 "Porta Central": f"{escala_do_dia[self.funcao_homens_dupla][0]} e {escala_do_dia[self.funcao_homens_dupla][1]}",
-                "Porta Esquerda": escala_do_dia[self.funcoes_homens_single[1]][0]
+                "Porta Esquerda": escala_do_dia[self.funcoes_homens_single[1]][0],
                 "Lateral do Púlpito": escala_do_dia[self.funcoes_homens_single[0]][0],
                 "Porta Direita": escala_do_dia[self.funcao_mulher][0]
                 
